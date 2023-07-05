@@ -22,7 +22,7 @@
   <div class='row'>
   <% if current_user != user %>
     <span><%= render "relationships/btn", user: user %></span>
-    <span><%= render "chat", user: @user, isRoom: @isRoom, roomId: @roomId, room: @room, entry: @entry %></span>
+    <span><%= render "users/chat", user: @user, isRoom: @isRoom, roomId: @roomId, room: @room, entry: @entry %></span>
   <% end %>
   </div>
     <%= link_to edit_user_path(user), class: "mt-1 btn btn-outline-secondary btn-block edit_user_#{user.id}" do %>
