@@ -18,11 +18,14 @@
   </tr>
 </table>
 　
-<div class='row'>
+<div class='width-100'>
+  <div class='row'>
   <% if current_user != user %>
-    <td><%= render "relationships/btn", user: user %></td>
+    <span><%= render "relationships/btn", user: user %></span>
+    <span><%= render "chat", user: @user, isRoom: @isRoom, roomId: @roomId, room: @room, entry: @entry %></span>
   <% end %>
-    <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block edit_user_#{user.id}" do %>
+  </div>
+    <%= link_to edit_user_path(user), class: "mt-1 btn btn-outline-secondary btn-block edit_user_#{user.id}" do %>
       <i class="fas fa-user-cog"></i>
     <% end %>
 </div>
